@@ -61,7 +61,7 @@ export function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <span>© 2025 Jose Pavas Garzon. All rights reserved.</span>
+          <span>© Jose Pavas Garzon. All rights reserved.</span>
         </div>
       </div>
     </footer>

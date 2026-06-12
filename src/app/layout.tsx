@@ -10,8 +10,8 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Design Gallery — Curated Hardware & Design Archive",
-    template: "%s — Design Gallery",
+    default: "Design Gallery",
+    template: "%s",
   },
   description,
   applicationName: siteName,
@@ -33,12 +33,12 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName,
-    title: "Design Gallery — Curated Hardware & Design Archive",
+    title: "Design Gallery",
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Design Gallery — Curated Hardware & Design Archive",
+    title: "Design Gallery",
     description,
   },
   robots: {

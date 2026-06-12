@@ -45,8 +45,6 @@ USER nextjs
 
 EXPOSE 3000
 
-VOLUME ["/app/data"]
-
 ENV DATABASE_PATH=/app/data/gallery.db
 
 CMD ["node", "server.js"]

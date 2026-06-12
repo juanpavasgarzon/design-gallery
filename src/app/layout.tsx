@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AppShell } from "./_components/AppShell";
 import "@/index.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 const siteName = "Design Gallery";
 const description =
   "A curated archive of hardware and design references. explored through live, interactive embedded viewers.";

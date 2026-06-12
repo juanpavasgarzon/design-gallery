@@ -32,7 +32,7 @@ export function Footer() {
           <div>
             <div className={styles.brand}>Design Gallery</div>
             <p className={styles.desc}>
-              A curated archive of hardware and design references — explored through live, embedded viewers.
+              A curated archive of hardware and design references. explored through live, embedded viewers.
             </p>
           </div>
 

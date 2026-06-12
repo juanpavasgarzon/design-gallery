@@ -1,4 +1,4 @@
-# ── Stage 1: install deps (with native build tools for better-sqlite3) ──────────
+# ── Stage 1: install & compile deps (needs build tools for better-sqlite3) ──────
 FROM node:22-alpine AS deps
 RUN apk add --no-cache python3 make g++
 WORKDIR /app
@@ -24,16 +24,15 @@ ENV HOSTNAME=0.0.0.0
 RUN addgroup --system --gid 1001 nodejs \
  && adduser  --system --uid 1001 nextjs
 
-# Next.js standalone output
+# Standalone Next.js output
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static   ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static    ./.next/static
 COPY --from=builder --chown=nextjs:nodejs /app/public          ./public
 
-# better-sqlite3 native module (not bundled by standalone)
-COPY --from=deps --chown=nextjs:nodejs /app/node_modules/better-sqlite3  ./node_modules/better-sqlite3
-COPY --from=deps --chown=nextjs:nodejs /app/node_modules/node-gyp-build  ./node_modules/node-gyp-build
+# Full node_modules compiled for Alpine (superset of standalone's trimmed deps,
+# ensures better-sqlite3 native binary and all its transitive deps are present)
+COPY --from=deps --chown=nextjs:nodejs /app/node_modules ./node_modules
 
-# Persistent data directory for SQLite
 RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
 
 USER nextjs
@@ -41,5 +40,7 @@ USER nextjs
 EXPOSE 3000
 
 VOLUME ["/app/data"]
+
+ENV DATABASE_PATH=/app/data/gallery.db
 
 CMD ["node", "server.js"]

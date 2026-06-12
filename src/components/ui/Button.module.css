@@ -1,0 +1,74 @@
+.btn {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 11px 22px;
+  border-radius: 999px;
+  transition: all 0.2s var(--ease);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+.primary {
+  background: var(--accent);
+  color: #0D0D0D;
+  font-weight: 500;
+}
+.primary:hover {
+  background: var(--accent-hover);
+}
+
+.ghost {
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.danger {
+  border: 1px solid var(--err-border);
+  color: var(--err-text);
+}
+.danger:hover {
+  background: rgba(176, 74, 74, 0.12);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.iconBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-2);
+  transition: all 0.2s var(--ease);
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+.iconBtn svg {
+  width: 16px;
+  height: 16px;
+}
+.iconBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.iconBtnDanger:hover {
+  border-color: var(--err-border);
+  color: var(--err-text);
+}

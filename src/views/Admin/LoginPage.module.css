@@ -1,0 +1,68 @@
+.loginWrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 24px;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 400px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.lock {
+  width: 42px;
+  height: 42px;
+  border-radius: 11px;
+  background: var(--accent-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  color: var(--accent);
+}
+
+.loginTitle {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+
+.loginSub {
+  color: var(--muted-2);
+  font-size: 14px;
+  margin: 0 0 28px;
+}
+
+.pwWrap {
+  position: relative;
+}
+
+.pwToggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+.pwToggle:hover {
+  color: var(--accent);
+  background: var(--accent-dim);
+}

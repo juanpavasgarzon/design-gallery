@@ -1,0 +1,10 @@
+.confirmText {
+  color: var(--muted-2);
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confirmTarget {
+  color: var(--text);
+}

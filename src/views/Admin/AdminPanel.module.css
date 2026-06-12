@@ -1,0 +1,151 @@
+.admin {
+  padding-top: 40px;
+  padding-bottom: 90px;
+  flex: 1;
+}
+
+.adminHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.adminTitle {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 38px;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.adminSub {
+  color: var(--muted-2);
+  font-size: 15px;
+  margin: 0 0 40px;
+}
+
+.section {
+  margin-bottom: 52px;
+}
+
+.sectionBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionTitle {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.sectionCount {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.filters > :first-child {
+  flex: 1;
+  min-width: 200px;
+}
+
+.categorySelect {
+  height: 38px;
+  padding: 0 32px 0 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: var(--font-sans);
+  color: var(--text);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s var(--ease);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  flex-shrink: 0;
+}
+
+.categorySelect:focus {
+  border-color: var(--accent);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.catAdd {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  max-width: 420px;
+}
+
+.catAddInput {
+  flex: 1;
+}
+
+.loaderWrap {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.spinner {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .adminTitle {
+    font-size: 30px;
+  }
+}

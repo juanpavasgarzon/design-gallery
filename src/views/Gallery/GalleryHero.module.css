@@ -1,0 +1,41 @@
+.hero {
+  padding: 92px 0 0;
+}
+
+.title {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(40px, 7vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  margin: 0;
+  max-width: 14ch;
+}
+
+.title em {
+  font-style: normal;
+  color: var(--accent);
+}
+
+.desc {
+  margin: 26px 0 0;
+  max-width: 56ch;
+  color: var(--muted-2);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.rule {
+  height: 1px;
+  margin-top: 52px;
+  background: var(--border);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 60px 0 0;
+  }
+  .rule {
+    margin-top: 40px;
+  }
+}
